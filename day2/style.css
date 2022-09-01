@@ -1,0 +1,75 @@
+*{
+    margin:0;
+padding: 0;
+box-sizing: border-box;
+}
+body{
+    background-size: cover;
+    background: url(https://api.unsplash.com/search/photos?query=gamepad) no-repeat center fixed ;
+}
+h1{
+    position: relative;
+    height: 65px;
+    /* top: 45vh;
+    left: 1vh; */
+    font-size: 3rem;
+    font-weight: normal;
+    background: black;
+    color: rgb(172, 65, 127);   
+}
+.gamebox{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    /* align-items: center; */
+    top: 150px;
+    position: relative;
+}
+#game{
+width: 400px;
+height: 500px;
+border: 3px solid black;
+border-radius: 10px;
+border-color: rgb(0,0, 0);
+/* position: absolute;
+top: 20vh;
+left: 35vh; */
+overflow: hidden;
+background: rgba(254,254,254,0.07);
+}
+#Ball{
+    width: 20px;
+    height: 20px;
+    background-color: rgb(229,121,193);
+    border: 2px solid black;
+    position: relative;
+    top: 400px;
+    left: 190px;
+    border-radius: 25px;
+    z-index: 10000000;
+}
+.hurdel{
+    width: 400px;
+    height: 20px;
+    background-color: rgb(42, 83, 196);
+    position: relative;
+    top: 100px;
+    margin-top: -20px;
+    background: yellow;
+    color: transparent;
+    
+}
+.hole{
+    width: 30px;
+    height: 20px;
+    background-color: rgba(0,0,0,0.8);
+    position: relative;
+    top: 100px;
+    border-radius: 8px;
+    margin-top: -20px;
+
+}
+button{
+    position: relative;
+    margin: 0 auto;
+}

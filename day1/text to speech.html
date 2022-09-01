@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text to speech using Javascript</title>
+    <style>
+        :root {
+            --background: #808080;
+            --color: #ffffff;
+            --primary-color: #0f3460;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: var(--background);
+            display:flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        input {
+            padding: 10px;
+            width: 150px;
+            border-radius: 5px;
+            border: solid 2px #BBB;
+        }
+
+        div {
+            margin: 10px 0;
+        }
+
+        button {
+            padding: 10px;
+            background-color: #6a67ce;
+            color: #FFFFFF;
+            border: 0;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 50vh;
+        }
+
+        .login-container {
+            position: relative;
+            width: 22.2rem;
+        }
+
+        .circle {
+            width: 8rem;
+            height: 8rem;
+            background: var(--primary-color);
+            border-radius: 50%;
+            -webkit-border-radius: 50%;
+            -moz-border-radius: 50%;
+            -ms-border-radius: 50%;
+            -o-border-radius: 50%;
+            position: absolute;
+        }
+
+        .circle-one {
+            top: 0;
+            left: 0;
+            z-index: -1;
+            transform: translate(-45%, -45%);
+            -webkit-transform: translate(-45%, -45%);
+            -moz-transform: translate(-45%, -45%);
+            -ms-transform: translate(-45%, -45%);
+            -o-transform: translate(-45%, -45%);
+        }
+
+        .circle-two {
+            bottom: 0;
+            right: 0;
+            z-index: -1;
+            transform: translate(45%, 45%);
+            -webkit-transform: translate(45%, 45%);
+            -moz-transform: translate(45%, 45%);
+            -ms-transform: translate(45%, 45%);
+            -o-transform: translate(45%, 45%);
+        }
+    </style>
+</head>
+
+<body>
+    <section class="container">
+        <div class="login-container">
+            <div class="circle circle-one"></div>
+            <h2>Javascript Text to Speech</h2>
+            <div>
+                <input type="text" id="text-to-speech" placeholder="Enter text to speech....">
+            </div>
+            <div>
+                <button type="button" onclick="convert()">click to listen</button>
+            </div>
+            <div class="circle circle-two"></div>
+        </div>
+        </div>
+    </section>
+    <p><small><strong>NOTE:</strong>Enter text and click on speak button.</small></p>
+    <script>
+        function convert() {
+            var input = document.getElementById("text-to-speech").value;
+            var speech = new SpeechSynthesisUtterance();
+            speech.lang = "en-US";
+            speech.text = input;
+            speech.volume = 1;
+            speech.rate = 1;
+            speech.pitch = 1;
+            window.speechSynthesis.speak(speech);
+        }
+    </script>
+</body>
+
+</html>
