@@ -1,0 +1,142 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans&family=Lato&family=Source+Code+Pro:wght@300&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #9DBCBC;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+/* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
+.sticky + .content {
+  padding-top: 60px;
+}
+
+#sideBar {
+  padding: 18px 8%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.2s ease-in-out;
+  flex-wrap: nowrap;
+  background-color: #006666;
+}
+#sideBar h4 {
+  color: #F1DCD1;
+  font-size: 32px;
+  border-radius: 12px 0;
+  cursor: pointer;
+}
+#sideBar h4 span {
+  color: #9DBCBC;
+}
+#sideBar ul li {
+  display: inline-block;
+  list-style: none;
+  margin: 15px 27px;
+  font-family: "Fira Sans", "Lato", "Poppins";
+  font-size: 18px;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+#sideBar ul li a {
+  text-decoration: none;
+  color: #FFF5BB;
+  position: relative;
+}
+#sideBar ul li a::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 0;
+  position: absolute;
+  top: 22px;
+  transition: 0.5s ease-in-out;
+}
+#sideBar ul li a:hover::after {
+  content: "";
+  border: 0.25px solid #FFF5BB;
+  width: 100%;
+  left: 0;
+  bottom: 10px;
+}
+#sideBar button {
+  border-radius: 15px 0;
+  height: 38px;
+  width: 78px;
+  background-color: #9DBCBC;
+  color: #6B6B6B;
+  font-family: "Fira Sans", "Lato", "Poppins";
+  font-weight: 800;
+  font-size: 16px;
+  letter-spacing: 1px;
+  border: none;
+  cursor: pointer;
+}
+#sideBar button:hover {
+  color: #000;
+  background-color: #99dede;
+}
+
+#info {
+  width: 97vw;
+  height: 66vh;
+  position: relative;
+  margin: 1vw;
+  padding: 10px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+#info .infoContainer .head {
+  font-size: 65px;
+  font-family: "Source Code Pro";
+}
+#info .infoContainer .name {
+  font-size: 51px;
+  font-family: "Fira Sans", "Lato", "Poppins";
+}
+#info .infoContainer .abut {
+  font-family: "Source Code Pro";
+  font-size: 36px;
+}
+#info .infoContainer button {
+  padding: 5px 11px;
+  border-radius: 0 12px;
+  color: #FFF5BB;
+  text-transform: capitalize;
+  background-color: #006666;
+  font-weight: bold;
+  font-size: 16px;
+  margin: 13px 3px;
+  border: none;
+  cursor: pointer;
+}
+#info .infoContainer button:hover {
+  color: #006666;
+  background-color: #FFF5BB;
+  box-shadow: 4px 6px #6B6B6B;
+}
+#info img {
+  width: 28vw;
+  height: 55vh;
+}
+
+#projects .card {
+  width: 500px;
+}
+
+@media (width: 1615px) {
+  * {
+    background-color: rgb(230, 140, 140);
+  }
+}/*# sourceMappingURL=style.css.map */

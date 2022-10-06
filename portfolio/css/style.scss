@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans&family=Lato&family=Source+Code+Pro:wght@300&display=swap');
+
+$Nav-Font: "Fira Sans", "Lato", "Poppins";
+$Nav-color: #FFF5BB;
+$body-BG: #9DBCBC;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+    background-color:$body-BG;
+}
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1  ;
+  }
+  
+  /* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
+  .sticky + .content {
+    padding-top: 60px;
+  }
+#sideBar {
+    padding: 18px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.2s ease-in-out;
+    flex-wrap: nowrap;
+    background-color: #006666;
+    h4 {
+        color:#F1DCD1;
+        font-size: 32px;
+        border-radius: 12px 0;
+        cursor: pointer;
+        span{
+            color: #9DBCBC;
+        }
+    }
+    ul li {
+        display: inline-block;
+        list-style: none;
+        margin: 15px 27px;
+        font-family: $Nav-Font;
+        font-size: 18px;
+        font-weight: 500;
+        text-transform: capitalize;
+
+        a {
+            text-decoration: none;
+            color: $Nav-color;
+            position: relative;
+        }
+
+        a::after {
+            content: '';
+            display: block;
+            // border: 1px solid black;
+            width: 0;
+            height: 0;
+            position: absolute;
+            top: 22px;
+            transition: 0.5s ease-in-out;
+        }
+        
+        a:hover::after {
+            content: '';
+            border: 0.25px solid $Nav-color;
+            width: 100%;
+            left: 0;
+            bottom: 10px;
+        }
+    }
+
+    button {
+        border-radius: 15px 0;
+        height: 38px;
+        width: 78px;
+        background-color: #9DBCBC;
+        color: #6B6B6B;
+        font-family: $Nav-Font;
+        font-weight: 800;
+        font-size: 16px;
+        letter-spacing: 1px;
+        border: none;
+        cursor: pointer;
+    }
+    button:hover{
+        color: #000;
+        background-color: #99dede;
+    }
+}
+
+#info {
+    // background-color: red;
+    width: 97vw;
+    height: 66vh;
+    // border: 1px solid black;
+    position: relative;
+    margin: 1vw;
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    .infoContainer{
+        .head{
+            font-size: 65px;
+            font-family: "Source Code Pro";
+        }
+        .name{
+            font-size: 51px;
+            font-family: $Nav-Font;
+            
+        }
+        .abut{
+            font-family: "Source Code Pro";
+            font-size: 36px;
+        }
+        
+    button{
+        padding: 5px 11px;
+        border-radius: 0 12px;
+        color:#FFF5BB;
+        text-transform: capitalize;
+        background-color: #006666;
+        font-weight: bold;
+        font-size: 16px;
+        margin: 13px 3px;
+        border: none;
+        cursor: pointer;
+    }
+    button:hover{
+        color: #006666;
+        background-color: #FFF5BB;
+        box-shadow: 4px 6px #6B6B6B;
+    } 
+    
+    }
+    img{
+        width: 28vw;
+        height: 55vh;
+    }
+}
+#projects{
+    .card{
+        width: 500px;
+    }
+}
+@media (min-width:1615px) {
+    *{
+        background-color: rgb(230,140,140);
+    }
+    .infoContainer
+}
