@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Full Screen</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <video id="video" src="https://www.w3schools.com/howto/rain.mp4" autoplay muted loop></video>
+    <div class="box">
+        <h1>Heading</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique eos voluptatibus ducimus autem facere
+            dolorem magnam tenetur nisi quam, cupiditate neque deserunt repellat officia dolore mollitia placeat harum
+            accusantium quod nihil sequi quidem id atque.</p>
+        <button >Pause</button>
+    </div>
+</body>
+<script>
+    let btn = document.getElementsByTagName('button')[0];
+    // getelement by tag name or class name bsacailly gives you an array so its better to select the particular as we get from an array or instead use id class
+    let video = document.getElementById('video');
+
+    btn.addEventListener('click',()=> {
+        // console.log("clicked")
+        if (video.paused) {
+            video.play();
+            btn.innerHTML = "pause";
+        } else {
+            video.pause();
+            btn.innerHTML = "play";
+        }
+    });
+</script>
+
+</html>
